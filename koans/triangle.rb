@@ -15,6 +15,12 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+	if a <= 0 or b <= 0 or c <= 0
+		raise TriangleError, "There cannot be a triangle with a, b or c <= 0"
+	end
+	unless a + b > c and a + c > b and b+c > a
+		raise TriangleError, "It is not a proper triangle"
+	end
 	if a == b 
 		if b == c
 			return :equilateral
