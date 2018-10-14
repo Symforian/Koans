@@ -15,6 +15,22 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+	if a == b 
+		if b == c
+			return :equilateral
+		else
+			:isosceles
+		end
+	else
+		if b == c
+			return :isosceles
+		end
+		if a == c
+			return :isosceles
+		end
+		return :scalene
+	end
+	
 end
 
 # Error class used in part 2.  No need to change this code.
